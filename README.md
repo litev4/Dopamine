@@ -48,7 +48,16 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成
 然后，使用任意带自解压功能的软件(例如：***好压***)，打开其自解压功能，将解压路径选择至%appdata%并打开"解压后打开"功能；<br>
 最后，在"解压后打开"一栏填入"Dopamine\main-service.bat"，解压模式选择静默+覆盖文件，再选择任意图标即可构建。<br>
 
-7.我如何将Dopamine更改名字并分发？
+7.我如何为Dopamine的开发做出贡献?
+-
+首先，在repo界面中fork本项目；<br>
+接着，在本repo的issues界面寻找bug并思考修复的思路；<br>
+然后，在您fork的版本更改Dopamine的代码；<br>
+最后，在本repo的界面提交Pull requests。<br><br>
+在作者核查完代码并确保代码风格的一致性，您的代码会被合并到主分支。<br>
+感谢您对Dopamine的开发伸出援手！
+
+8.我如何将Dopamine更改名字并分发?
 -
 你可以在本repo的文件("state-display.bat")中的开头发现有一行叫":serversion"的代码，其下方有各种设置的函数，还有名叫"state-off.vbs"的文件，您可以随心对里面的文本进行更改，但在github上必须fork之后才能进行分发。
  
