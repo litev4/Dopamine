@@ -2,11 +2,11 @@
 
 1.什么是Dopamine?
 -
-Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，适用于***几乎所有的***Windows版本,甚至是安装了wine的linux也不在话下。
+Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，软件轻量，适用于***几乎所有的***Windows版本,甚至是安装了wine的linux也不在话下。
 
 2.我应该如何使用Dopamine?
 -
-双击打开Dopamine.exe，程序会向你自动申请管理员权限，同意后Dopamine便会常驻于后台为您杀死希沃白板的运维服务进程。关闭Dopamine也很简单，重复上述步骤即可。
+在release中下载Dopamine的最新构建，下载完毕后双击打开Dopamine，程序会向你自动申请管理员权限，同意后Dopamine便会常驻于后台为您杀死希沃白板的运维服务进程。关闭Dopamine也很简单，重复上述步骤即可。
 
 3.使用Dopamine的Windows系统需求是什么?
 -
