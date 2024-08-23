@@ -28,7 +28,7 @@ C:\Windows\System32\wscript.exe<br>
 5.我如何构建自己的可执行文件?
 -
 首先，在repo界面中点击 "Code" 按钮，并选择 "Download ZIP" 将本repo的文件下载下来；<br>
-接着，在下载下来的ZIP文件中，使用任意解压软件在文件中新建一个名叫"Dopamine"的文件夹，并将一下的文件("main-service.bat","state-display.bat","state-off.vbs")复制到您新建的文件夹中；<br>
+接着，在下载下来的ZIP文件中，使用任意解压软件在文件中新建一个名叫"Dopamine"的文件夹，并将以下的文件<br>("main-service.bat","state-display.bat","state-off.vbs")复制到您新建的文件夹中；<br>
 然后，使用任意带自解压功能的软件(例如：***好压***)，打开其自解压功能，将解压路径选择至%appdata%并打开"解压后打开"功能；<br>
 最后，在"解压后打开"一栏填入"Dopamine\main-service.bat"，解压模式选择静默+覆盖文件，再选择任意图标即可构建。<br>
 
