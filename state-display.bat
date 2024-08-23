@@ -1,9 +1,10 @@
 @echo off
+title dontkillme
 
 :setversion
 set servicename=Dopamine
-set version=v1.3
-set codename=rewrite-backport
+set version=v1.4
+set codename=alpha
 set website=https://litev4.github.io/dopamine-web/
 
 :checkaction
@@ -18,7 +19,7 @@ if exist %appdata%\dopamine_service\nofiles.dp goto nofiles
 echo off
 mode con cols=49 lines=10
 color f3
-title %servicename% Service.
+title %servicename% Service is running!
 echo.
 echo.
 echo.
@@ -34,8 +35,24 @@ exit
 
 :off
 del /f /s /q %appdata%\dopamine_service\turnoff.dp
-start %appdata%\dopamine\state-off.vbs
-taskkill /f /im cmd.exe
+taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  mwtonthe_top"
+taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  %servicename% Service is running!"
+taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  %servicename% Service start failed."
+echo off
+mode con cols=49 lines=10
+color fa
+title %servicename% Service stopped.
+echo.
+echo.
+echo.
+echo                         O
+echo              %servicename% 服务已成功停止
+echo                按任意键关闭该窗口
+echo.
+echo.
+echo %servicename% Service 版本 / %version% %codename%
+set /p =官方网址 / %website%<nul
+pause >nul
 exit
 
 :nofiles
@@ -43,7 +60,7 @@ del /f /s /q %appdata%\dopamine_service\nofiles.dp
 echo off
 mode con cols=49 lines=10
 color f4
-title %servicename% Service.
+title %servicename% Service start failed.
 echo.
 echo.
 echo.

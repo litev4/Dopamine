@@ -1,4 +1,5 @@
 @echo off
+title mwtonthe_top
 
 :createpath
 mkdir %appdata%\dopamine_service
@@ -27,11 +28,14 @@ goto mainservice
 
 :judgeexist
 del /f /s /q %appdata%\dopamine_service\state.dp
+cls
 ping 127.0.0.1 -n 2 >nul
 if exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\turnoff.dp
 start %appdata%\dopamine\state-display.bat
 
 :mainservice
+taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  Dopamine Service stopped."
+:loop
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
 taskkill /f /im SeewoCore.exe
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
@@ -49,7 +53,7 @@ taskkill /f /im SeewoHugoLauncher.exe
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
 taskkill /f /im SeewoFreezeUpdateAssist.exe
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
-goto mainservice
+goto loop
 
 :requirecheckfilesfailed
 clip > %appdata%\dopamine_service\nofiles.dp
