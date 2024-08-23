@@ -14,7 +14,7 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成
 
 3.使用Dopamine的Windows系统需求是什么?
 -
-理论上，Dopamine没有对Windows系统的需求。但是如果缺少了以下Windows文件，Dopamine不会正确运行。(在将来的Dopamine版本中可能会添加对这些文件的自动检测)<br><br>
+理论上，Dopamine没有对Windows系统的需求。但是如果缺少了以下Windows文件，Dopamine不会正确运行。(在最新版本的Dopamine版本(v1.1 alpha及以上)中已经添加了对这些文件的自动检测，若系统没有这些文件，Dopamine将不会启动)<br><br>
 ***Dopamine需要的Windows系统文件：***<br><br>
 ***C:\Windows\System32\PING.EXE***<br>
 ***C:\Windows\System32\taskkill.exe***<br>
