@@ -38,13 +38,13 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常
 -
 首先，在本repo界面中点击 "Code" 按钮，并选择 "Download ZIP" 将本repo的文件下载下来；<br>
 然后，在您的Windows电脑中，进入%appdata%文件夹，新建一个名叫"Dopamine"的文件夹；<br>
-接着，将本repo的文件("main-service.bat","state-display.bat","state-off.vbs")解压到您新建的文件夹中；<br>
+接着，将本repo的文件("main-service.bat","state-display.bat")解压到您新建的文件夹中；<br>
 最后，您就可以打开文件夹中的main-service.bat，启动Dopamine了。<br>
 
 6.我如何构建自己的可执行文件?
 -
 首先，在repo界面中点击 "Code" 按钮，并选择 "Download ZIP" 将本repo的文件下载下来；<br>
-接着，在下载下来的ZIP文件中，使用任意解压软件在文件中新建一个名叫"Dopamine"的文件夹，并将以下的文件复制到您新建的文件夹中<br>("main-service.bat","state-display.bat","state-off.vbs")；<br>
+接着，在下载下来的ZIP文件中，使用任意解压软件在文件中新建一个名叫"Dopamine"的文件夹，并将以下的文件复制到您新建的文件夹中<br>("main-service.bat","state-display.bat")；<br>
 然后，使用任意带自解压功能的软件(例如：***好压***)，打开其自解压功能，将解压路径选择至%appdata%并打开"解压后打开"功能；<br>
 最后，在"解压后打开"一栏填入"Dopamine\main-service.bat"，解压模式选择静默+覆盖文件，再选择任意图标即可构建。<br>
 
@@ -59,5 +59,5 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常
 
 8.我如何将Dopamine更改名字并分发?
 -
-你可以在本repo的文件("state-display.bat")中的开头发现有一行叫":serversion"的代码，其下方有各种设置的函数，还有名叫"state-off.vbs"的文件，您可以随心对里面的文本进行更改，但在github上必须fork之后才能进行分发。
+你可以在本repo的文件("state-display.bat")中的开头发现有一行叫":serversion"的代码，其下方有各种设置的函数，您可以随心对里面的函数对应的变量进行更改，但在github上必须fork之后才能进行分发。
  
