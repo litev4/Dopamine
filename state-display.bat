@@ -1,15 +1,14 @@
-@echo off
-
 :setversion
 set servicename=Dopamine
 set version=v1.0
 set codename=alpha
-set website=https://litev4.github.io/dopamine-web
+set website=https://litev4.github.io/dopamine-web/
 
 :checkaction
 if exist %appdata%\dopamine_service\turnoff.dp goto off
 
 :displaystate
+echo off
 mode con cols=49 lines=10
 color f3
 title %servicename% Service.
