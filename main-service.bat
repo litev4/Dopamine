@@ -12,6 +12,12 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+:requirefilescheck
+if not exist %systemdrive%\Windows\System32\PING.EXE goto requirecheckfilesfailed
+if not exist %systemdrive%\Windows\System32\taskkill.exe goto requirecheckfilesfailed
+if not exist %systemdrive%\Windows\System32\cmd.exe goto requirecheckfilesfailed
+if not exist %systemdrive%\Windows\System32\wscript.exe goto requirecheckfilesfailed
+
 :statecheck
 if exist %appdata%\dopamine_service\state.dp goto judgeexist
 start %appdata%\dopamine\state-display.bat
@@ -36,3 +42,8 @@ taskkill /f /im SeewoFreezeUpdateAssist.exe
 :keepstate
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
 goto mainservice
+
+:requirecheckfilesfailed
+clip > %appdata%\dopamine_service\nofiles.dp
+start %appdata%\dopamine\state-display.bat
+exit
