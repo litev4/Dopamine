@@ -19,8 +19,9 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常
 ***C:\Windows\System32\PING.EXE***<br>
 ***C:\Windows\System32\taskkill.exe***<br>
 ***C:\Windows\System32\cmd.exe***<br>
-***C:\Windows\System32\wscript.exe***<br><br>
+
 ***以上文件缺一不可***
+***在Dopamine v1.4 alpha版本后，非中文版的Windows将无法使用Dopamine。***
 
 4.我应该在何处提交bug?
 -
