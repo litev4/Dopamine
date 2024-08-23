@@ -1,7 +1,10 @@
+@echo off
+title Dopamine Loader
+
 :setversion
 set servicename=Dopamine
-set version=v1.1
-set codename=alpha
+set version=v1.2
+set codename=semi-rewrite
 set website=https://litev4.github.io/dopamine-web/
 
 :checkaction
@@ -25,15 +28,9 @@ echo              %servicename% 服务已成功运行
 echo                按任意键关闭该窗口
 echo.
 echo.
-echo %servicename% Service 版本 - %version% %codename%
-set /p =官方网址 - %website%<nul
+echo %servicename% Service 版本 / %version% %codename%
+set /p =官方网址 / %website%<nul
 pause >nul
-exit
-
-:off
-del /f /s /q %appdata%\dopamine_service\turnoff.dp
-start %appdata%\dopamine\state-off.vbs
-taskkill /f /im cmd.exe
 exit
 
 :nofiles
@@ -50,7 +47,7 @@ echo              %servicename% 服务无法运行
 echo                   缺少系统文件
 echo                按任意键关闭该窗口
 echo.
-echo %servicename% Service 版本 - %version% %codename%
-set /p =官方网址 - %website%<nul
+echo %servicename% Service 版本 / %version% %codename%
+set /p =官方网址 / %website%<nul
 pause >nul
 exit
