@@ -31,6 +31,7 @@ taskkill /f /im Easiupdate3Protect.exe
 taskkill /f /im Easiupdate3.exe
 taskkill /f /im SeewoServiceAssistant.exe
 taskkill /f /im SeewoHugoLauncher.exe
+taskkill /f /im SeewoFreezeUpdateAssist.exe
 
 :keepstate
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
