@@ -1,8 +1,18 @@
 @echo off
-title Dopamine Loader
 
 :createpath
 mkdir %appdata%\dopamine_service
+
+:hide
+if "%1"=="hide" goto admincheck
+start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit
+
+:admincheck
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    PowerShell -Command "Start-Process '%~dpnx0' -Verb RunAs"
+    exit /b
+)
 
 :requirefilescheck
 if not exist %systemdrive%\Windows\System32\PING.EXE goto requirecheckfilesfailed
@@ -11,27 +21,37 @@ if not exist %systemdrive%\Windows\System32\cmd.exe goto requirecheckfilesfailed
 if not exist %systemdrive%\Windows\System32\wscript.exe goto requirecheckfilesfailed
 
 :statecheck
-if exist %appdata%\dopamine_service\state.dp goto judgeexistence
-goto runservice
+if exist %appdata%\dopamine_service\state.dp goto judgeexist
+start %appdata%\dopamine\state-display.bat
+goto mainservice
 
-:judgeexistence
+:judgeexist
 del /f /s /q %appdata%\dopamine_service\state.dp
-cls
-color f3
-echo ÇëµÈ´ýDopamine¼ÓÔØ...
 ping 127.0.0.1 -n 2 >nul
-if exist %appdata%\dopamine_service\state.dp goto turnoff
-if not exist %appdata%\dopamine_service\state.dp goto runservice
+if exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\turnoff.dp
+start %appdata%\dopamine\state-display.bat
 
-:runservice
-start %appdata%\Dopamine\background-service.bat
-exit
-
-:turnoff
-start %appdata%\Dopamine\state-off.bat
-exit
+:mainservice
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im SeewoCore.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im SeewoAbility.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im EasiAgent.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im Easiupdate3Protect.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im Easiupdate3.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im SeewoServiceAssistant.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im SeewoHugoLauncher.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+taskkill /f /im SeewoFreezeUpdateAssist.exe
+if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+goto mainservice
 
 :requirecheckfilesfailed
 clip > %appdata%\dopamine_service\nofiles.dp
-start %appdata%\Dopamine\state-display.bat
+start %appdata%\dopamine\state-display.bat
 exit

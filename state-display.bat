@@ -1,10 +1,9 @@
 @echo off
-title Dopamine Loader
 
 :setversion
 set servicename=Dopamine
-set version=v1.2
-set codename=semi-rewrite
+set version=v1.3
+set codename=rewrite-backport
 set website=https://litev4.github.io/dopamine-web/
 
 :checkaction
@@ -31,6 +30,12 @@ echo.
 echo %servicename% Service °æ±¾ / %version% %codename%
 set /p =¹Ù·½ÍøÖ· / %website%<nul
 pause >nul
+exit
+
+:off
+del /f /s /q %appdata%\dopamine_service\turnoff.dp
+start %appdata%\dopamine\state-off.vbs
+taskkill /f /im cmd.exe
 exit
 
 :nofiles
