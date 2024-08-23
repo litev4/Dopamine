@@ -1,5 +1,9 @@
 *Dopamine QNA*
 
+前言
+-
+目前的Dopamine是针对**希沃管家*****版本1.4.9.3649***而制作的，Dopamine的作者也会在力所能及的范围内对新版本进行适配，如果遇到无法成功杀死进程的情况请及时大家提issues，对完善Dopamine的过程出一份力，谢谢大家。
+
 1.什么是Dopamine?
 -
 Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，软件轻量，适用于***几乎所有的***Windows版本,甚至是安装了wine的linux也不在话下。
@@ -18,7 +22,7 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成
 ***C:\Windows\System32\wscript.exe***<br><br>
 ***以上文件缺一不可***
 
-4.我如何提交bug?
+4.我应该在何处提交bug?
 -
 请在本repo的issues界面提交你的bug。<br>
 正确的bug提交应该包含以下信息:<br><br>
