@@ -11,21 +11,21 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成
 3.使用Dopamine的Windows系统需求是什么?
 -
 理论上，Dopamine没有对Windows系统的需求。但是如果缺少了以下Windows文件，Dopamine不会正确运行。(在将来的Dopamine版本中可能会添加对这些文件的自动检测)<br><br>
-***Dopamine需要的Windows系统文件：***<br>
-C:\Windows\System32\PING.EXE<br>
-C:\Windows\System32\taskkill.exe<br>
-C:\Windows\System32\cmd.exe<br>
-C:\Windows\System32\wscript.exe<br>
+***Dopamine需要的Windows系统文件：***<br><br>
+***C:\Windows\System32\PING.EXE***<br>
+***C:\Windows\System32\taskkill.exe***<br>
+***C:\Windows\System32\cmd.exe***<br>
+***C:\Windows\System32\wscript.exe***<br><br>
 ***以上文件缺一不可***
 
 4.我如何提交bug?
 -
 请在本repo的issues界面提交你的bug。<br>
 正确的bug提交应该包含以下信息:<br><br>
-1.Windows版本<br>
-2.Dopamine版本<br>
-3.希沃管家版本 + 安装包(如果可能)<br>
-4.复现bug的方法<br><br>
+***1.Windows版本***<br>
+***2.Dopamine版本***<br>
+***3.希沃管家版本*** + 安装包(如果可能)<br>
+***4.复现bug的方法***<br><br>
 请不要提交来自其他fork版本的bug，谢谢。<br>
 <br>
 
