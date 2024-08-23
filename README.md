@@ -1,4 +1,4 @@
-*QNA*
+*Dopamine QNA*
 
 1.什么是Dopamine?
 -
@@ -18,21 +18,33 @@ C:\Windows\System32\cmd.exe<br>
 C:\Windows\System32\wscript.exe<br>
 ***以上文件缺一不可***
 
-4.如何使用该repo的文件?
+4.我如何提交bug?
+-
+请在本repo的issues界面提交你的bug。<br>
+正确的bug提交应该包含以下信息:<br><br>
+1.Windows版本<br>
+2.Dopamine版本<br>
+3.希沃管家版本 + 安装包(如果可能)<br>
+4.复现bug的方法<br><br>
+请不要提交来自其他fork版本的bug，谢谢。<br>
+<br>
+
+以下内容是为开发者所写，正常用户可以止步了<br><br>
+5.如何使用该repo的文件?
 -
 首先，在本repo界面中点击 "Code" 按钮，并选择 "Download ZIP" 将本repo的文件下载下来；<br>
 然后，在您的Windows电脑中，进入%appdata%文件夹，新建一个名叫"Dopamine"的文件夹；<br>
 接着，将本repo的文件("main-service.bat","state-display.bat","state-off.vbs")解压到您新建的文件夹中；<br>
 最后，您就可以打开文件夹中的main-service.bat，启动Dopamine了。<br>
 
-5.我如何构建自己的可执行文件?
+6.我如何构建自己的可执行文件?
 -
 首先，在repo界面中点击 "Code" 按钮，并选择 "Download ZIP" 将本repo的文件下载下来；<br>
 接着，在下载下来的ZIP文件中，使用任意解压软件在文件中新建一个名叫"Dopamine"的文件夹，并将以下的文件复制到您新建的文件夹中<br>("main-service.bat","state-display.bat","state-off.vbs")；<br>
 然后，使用任意带自解压功能的软件(例如：***好压***)，打开其自解压功能，将解压路径选择至%appdata%并打开"解压后打开"功能；<br>
 最后，在"解压后打开"一栏填入"Dopamine\main-service.bat"，解压模式选择静默+覆盖文件，再选择任意图标即可构建。<br>
 
-6.我如何将Dopamine更改名字并分发？
+7.我如何将Dopamine更改名字并分发？
 -
 你可以在本repo的文件("state-display.bat")中的开头发现有一行叫":serversion"的代码，其下方有各种设置的函数，还有名叫"state-off.vbs"的文件，您可以随心对里面的文本进行更改，但在github上必须fork之后才能进行分发。
  
