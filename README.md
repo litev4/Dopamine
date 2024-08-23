@@ -34,4 +34,4 @@ C:\Windows\System32\wscript.exe<br>
 
 6.我如何将Dopamine更改名字并分发？
 -
-你可以在本repo的文件("state-display.bat")中的开头发现有一行叫":serversion"的代码，其下方有各种设置的函数，还有名叫"state-off.vbs"的文件，您可以随心对里面的文本进行更改，但在github上必须fork之后才能进行分发。 
+你可以在本repo的文件("state-display.bat")中的开头发现有一行叫":serversion"的代码，其下方有各种设置的函数，还有名叫"state-off.vbs"的文件，您可以随心对里面的文本进行更改，但在github上必须fork之后才能进行分发。
