@@ -1,6 +1,6 @@
 *Dopamine QNA*
 
-前言(请大家一定要读一下QNA呐 o(TヘTo) )
+前言( 请大家一定要读一下QNA呐 o(TヘTo) )
 -
 目前的Dopamine是针对希沃管家***版本1.4.9.3649***而制作的，Dopamine的作者也会在力所能及的范围内对新版本进行适配，如果遇到无法成功杀死进程的情况请及时大家提issues，对完善Dopamine的过程出一份力，谢谢大家。
 
@@ -14,7 +14,7 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成
 
 3.使用Dopamine的Windows系统需求是什么?
 -
-理论上，Dopamine没有对Windows系统的需求。但是如果缺少了以下Windows文件，Dopamine不会正确运行。(在最新版本的Dopamine版本(v1.1 alpha及以上)中已经添加了对这些文件的自动检测，若系统没有这些文件，Dopamine将不会启动)<br><br>
+理论上，Dopamine没有对Windows系统的需求。但是如果缺少了以下Windows文件，Dopamine不会正确运行。在最新版本的Dopamine版本(v1.1 alpha及以上)中已经添加了对这些文件的自动检测，若系统没有这些文件，Dopamine将不会启动。<br><br>
 ***Dopamine需要的Windows系统文件：***<br><br>
 ***C:\Windows\System32\PING.EXE***<br>
 ***C:\Windows\System32\taskkill.exe***<br>
