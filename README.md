@@ -2,7 +2,7 @@
 
 1.什么是Dopamine?
 -
-Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，适用于***几乎所有的***Windows版本。
+Dopamine是一款类似于Windows的'服务'的应用,由batch与vbs脚本构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，适用于***几乎所有的***Windows版本,甚至是安装了wine的linux也不在话下。
 
 2.我应该如何使用Dopamine?
 -
