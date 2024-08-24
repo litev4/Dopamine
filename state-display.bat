@@ -3,18 +3,18 @@ title dontkillme
 
 :setversion
 set servicename=Dopamine
-set version=v1.6
+set version=v1.7
 set codename=alpha
 set website=https://litev4.github.io/dopamine-web/
 
 :checkaction
-if exist %appdata%\dopamine_service\turnoff.dp goto off
+if exist "%appdata%\dopamine_service\turnoff.dp" goto off
 
 :checkrequiredfiles
-if exist %appdata%\dopamine_service\nofiles.dp goto nofiles
+if exist "%appdata%\dopamine_service\nofiles.dp" goto nofiles
 
 :checklanguagefiles
-if exist %appdata%\dopamine_service\language.dp goto lang
+if exist "%appdata%\dopamine_service\language.dp" goto lang
 
 :displaystate
 
@@ -37,7 +37,7 @@ pause >nul
 exit
 
 :off
-del /f /s /q %appdata%\dopamine_service\turnoff.dp
+del /f /s /q "%appdata%\dopamine_service\turnoff.dp"
 taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  mwtonthe_top"
 taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  %servicename% Service is running!"
 taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  %servicename% Service start failed."
@@ -59,7 +59,7 @@ pause >nul
 exit
 
 :nofiles
-del /f /s /q %appdata%\dopamine_service\nofiles.dp
+del /f /s /q "%appdata%\dopamine_service\nofiles.dp"
 echo off
 mode con cols=49 lines=10
 color f4
@@ -78,7 +78,7 @@ pause >nul
 exit
 
 :lang
-del /f /s /q %appdata%\dopamine_service\language.dp
+del /f /s /q "%appdata%\dopamine_service\language.dp"
 echo off
 mode con cols=49 lines=10
 color f4

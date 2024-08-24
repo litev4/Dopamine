@@ -3,7 +3,7 @@
 title mwtonthe_top
 
 :createpath
-mkdir %appdata%\dopamine_service
+mkdir "%appdata%\dopamine_service"
 cls
 
 :hide
@@ -22,50 +22,50 @@ ver|find "版本" >nul&&set ver=chinese||set ver=notchinese
 if %ver%==notchinese goto languagecheckfailed
 
 :requirefilescheck
-if not exist %systemdrive%\Windows\System32\PING.EXE goto requirecheckfilesfailed
-if not exist %systemdrive%\Windows\System32\taskkill.exe goto requirecheckfilesfailed
-if not exist %systemdrive%\Windows\System32\cmd.exe goto requirecheckfilesfailed
+if not exist "%systemdrive%\Windows\System32\PING.EXE" goto requirecheckfilesfailed
+if not exist "%systemdrive%\Windows\System32\taskkill.exe" goto requirecheckfilesfailed
+if not exist "%systemdrive%\Windows\System32\cmd.exe goto" requirecheckfilesfailed
 
 :statecheck
-if exist %appdata%\dopamine_service\state.dp goto judgeexist
-start %appdata%\dopamine\state-display.bat
+if exist "%appdata%\dopamine_service\state.dp goto" judgeexist
+start "" "%appdata%\Dopamine\state-display.bat"
 goto mainservice
 
 :judgeexist
-del /f /s /q %appdata%\dopamine_service\state.dp
+del /f /s /q "%appdata%\dopamine_service\state.dp"
 cls
 ping 127.0.0.1 -n 2 >nul
-if exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\turnoff.dp
-start %appdata%\dopamine\state-display.bat
+if exist "%appdata%\dopamine_service\state.dp clip" > "%appdata%\dopamine_service\turnoff.dp"
+start "" "%appdata%\Dopamine\state-display.bat"
 
 :mainservice
 taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq 管理员:  Dopamine Service stopped."
 :loop
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im SeewoCore.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im SeewoAbility.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im EasiAgent.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im Easiupdate3Protect.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im Easiupdate3.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im SeewoServiceAssistant.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im SeewoHugoLauncher.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 taskkill /f /im SeewoFreezeUpdateAssist.exe
-if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
+if not exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\state.dp"
 goto loop
 
 :requirecheckfilesfailed
-clip > %appdata%\dopamine_service\nofiles.dp
-start %appdata%\dopamine\state-display.bat
+clip > "%appdata%\dopamine_service\nofiles.dp"
+start "" "%appdata%\Dopamine\state-display.bat"
 exit
 
 :languagecheckfailed
-clip > %appdata%\dopamine_service\language.dp
-start %appdata%\dopamine\state-display.bat
+clip > "%appdata%\dopamine_service\language.dp"
+start "" "%appdata%\Dopamine\state-display.bat"
 exit
