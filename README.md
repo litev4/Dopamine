@@ -14,15 +14,16 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常
 
 3.使用Dopamine的Windows系统需求是什么?
 -
-理论上，Dopamine没有对Windows系统的需求。但是如果缺少了以下Windows文件，Dopamine不会正确运行。在Dopamine版本v1.1 alpha及以上中已经添加了对这些文件的自动检测，若系统没有这些文件，Dopamine将不会启动。<br><br>
+***Dopamine最新版***(v1.6 alpha及以上)会自动检测您的Windows系统是否符合运行需求，如果Dopamine检测到你的Windows不符合需求，Dopamine将不会运行。在Dopamine版本v1.1 alpha中已经添加了对系统文件的自动检测，Dopamine版本v1.6 alpha已经添加了对系统语言的自动检测<br>
+
+***在Dopamine v1.4 alpha之后，您的Windows系统语言应该为简体中文***<br>
+
 ***Dopamine需要的Windows系统文件：***<br><br>
 ***C:\Windows\System32\PING.EXE***<br>
 ***C:\Windows\System32\taskkill.exe***<br>
 ***C:\Windows\System32\cmd.exe***<br>
-
-***以上文件缺一不可***<br>
-***在Dopamine v1.4 alpha版本后，非中文版的Windows将无法使用Dopamine。***<br>
-***在Dopamine v1.5 alpha之前，Dopamine还需要C:\Windows\System32\wscript.exe***
+***在Dopamine v1.5 alpha之前，Dopamine还需要C:\Windows\System32\wscript.exe***<br>
+***以上文件缺一不可***<br><br>
 
 4.我应该在何处提交bug?
 -
