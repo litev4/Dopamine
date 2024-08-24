@@ -19,7 +19,6 @@ if %errorlevel% neq 0 (
 if not exist %systemdrive%\Windows\System32\PING.EXE goto requirecheckfilesfailed
 if not exist %systemdrive%\Windows\System32\taskkill.exe goto requirecheckfilesfailed
 if not exist %systemdrive%\Windows\System32\cmd.exe goto requirecheckfilesfailed
-if not exist %systemdrive%\Windows\System32\wscript.exe goto requirecheckfilesfailed
 
 :statecheck
 if exist %appdata%\dopamine_service\state.dp goto judgeexist
