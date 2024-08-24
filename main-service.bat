@@ -1,8 +1,10 @@
 @echo off
+:preventnotgettingkilled
 title mwtonthe_top
 
 :createpath
 mkdir %appdata%\dopamine_service
+cls
 
 :hide
 if "%1"=="hide" goto admincheck

@@ -3,7 +3,7 @@ title dontkillme
 
 :setversion
 set servicename=Dopamine
-set version=v1.4
+set version=v1.5
 set codename=alpha
 set website=https://litev4.github.io/dopamine-web/
 
@@ -28,8 +28,8 @@ echo              %servicename% 服务已成功运行
 echo                按任意键关闭该窗口
 echo.
 echo.
-echo %servicename% Service 版本 / %version% %codename%
-set /p =官方网址 / %website%<nul
+echo %servicename% Service 版本 - %version% %codename%
+set /p =官方网址 - %website%<nul
 pause >nul
 exit
 
@@ -50,8 +50,8 @@ echo              %servicename% 服务已成功停止
 echo                按任意键关闭该窗口
 echo.
 echo.
-echo %servicename% Service 版本 / %version% %codename%
-set /p =官方网址 / %website%<nul
+echo %servicename% Service 版本 - %version% %codename%
+set /p =官方网址 - %website%<nul
 pause >nul
 exit
 
@@ -69,7 +69,7 @@ echo              %servicename% 服务无法运行
 echo                   缺少系统文件
 echo                按任意键关闭该窗口
 echo.
-echo %servicename% Service 版本 / %version% %codename%
-set /p =官方网址 / %website%<nul
+echo %servicename% Service 版本 - %version% %codename%
+set /p =官方网址 - %website%<nul
 pause >nul
 exit
