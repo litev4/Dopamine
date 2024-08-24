@@ -18,8 +18,8 @@ if %errorlevel% neq 0 (
 )
 
 :checklanguage
-ver|find "°æ±¾" >nul&&set ver=chinese||set ver=notchinese
-if %ver%==notchinese goto languagecheckfailed
+ver|find "°æ±¾" >nul&&set ver="chinese"||set ver="notchinese"
+if %ver%=="notchinese" goto languagecheckfailed
 
 :requirefilescheck
 if not exist "%systemdrive%\Windows\System32\PING.EXE" goto requirecheckfilesfailed
@@ -27,15 +27,14 @@ if not exist "%systemdrive%\Windows\System32\taskkill.exe" goto requirecheckfile
 if not exist "%systemdrive%\Windows\System32\cmd.exe goto" requirecheckfilesfailed
 
 :statecheck
-if exist "%appdata%\dopamine_service\state.dp goto" judgeexist
+if exist "%appdata%\dopamine_service\state.dp" goto judgeexistence
 start "" "%appdata%\Dopamine\state-display.bat"
 goto mainservice
 
-:judgeexist
+:judgeexistence
 del /f /s /q "%appdata%\dopamine_service\state.dp"
-cls
 ping 127.0.0.1 -n 2 >nul
-if exist "%appdata%\dopamine_service\state.dp clip" > "%appdata%\dopamine_service\turnoff.dp"
+if exist "%appdata%\dopamine_service\state.dp" clip > "%appdata%\dopamine_service\turnoff.dp"
 start "" "%appdata%\Dopamine\state-display.bat"
 
 :mainservice
