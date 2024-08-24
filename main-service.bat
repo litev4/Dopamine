@@ -17,6 +17,10 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+:checklanguage
+ver|find "°æ±¾" >nul&&set ver=chinese||set ver=notchinese
+if ver==chinese goto languagecheckfailed
+
 :requirefilescheck
 if not exist %systemdrive%\Windows\System32\PING.EXE goto requirecheckfilesfailed
 if not exist %systemdrive%\Windows\System32\taskkill.exe goto requirecheckfilesfailed
@@ -35,7 +39,7 @@ if exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\t
 start %appdata%\dopamine\state-display.bat
 
 :mainservice
-taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq ç®¡ç†å‘˜:  Dopamine Service stopped."
+taskkill /f /fi "imagename eq cmd.exe" /fi "windowtitle eq ¹ÜÀíÔ±:  Dopamine Service stopped."
 :loop
 if not exist %appdata%\dopamine_service\state.dp clip > %appdata%\dopamine_service\state.dp
 taskkill /f /im SeewoCore.exe
@@ -58,5 +62,10 @@ goto loop
 
 :requirecheckfilesfailed
 clip > %appdata%\dopamine_service\nofiles.dp
+start %appdata%\dopamine\state-display.bat
+exit
+
+:languagecheckfailed
+clip > %appdata%\dopamine_service\language.dp
 start %appdata%\dopamine\state-display.bat
 exit
