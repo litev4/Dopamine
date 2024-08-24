@@ -19,7 +19,7 @@ if %errorlevel% neq 0 (
 
 :checklanguage
 ver|find "°æ±¾" >nul&&set ver=chinese||set ver=notchinese
-if ver==chinese goto languagecheckfailed
+if %ver%==notchinese goto languagecheckfailed
 
 :requirefilescheck
 if not exist %systemdrive%\Windows\System32\PING.EXE goto requirecheckfilesfailed
