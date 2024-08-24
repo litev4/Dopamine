@@ -6,7 +6,7 @@
 
 1.什么是Dopamine?
 -
-Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，软件轻量，适用于***几乎所有的***Windows版本,甚至是安装了wine的linux也不在话下。
+Dopamine是一款类似于Windows的'服务'的应用,由batch脚本(旧版本还有vbs脚本)构成，常驻于后台寻找并杀死希沃白板的运维服务进程，操作简单且便捷，软件轻量，适用于***几乎所有的***Windows版本,甚至是安装了wine的linux也不在话下。
 
 2.我应该如何使用Dopamine?
 -
@@ -14,7 +14,7 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常
 
 3.使用Dopamine的Windows系统需求是什么?
 -
-***Dopamine最新版***(v1.6 alpha及以上)会自动检测您的Windows系统是否符合运行需求，如果Dopamine检测到你的Windows不符合需求，Dopamine将不会运行。在Dopamine版本v1.1 alpha中已经添加了对系统文件的自动检测，Dopamine版本v1.6 alpha已经添加了对系统语言的自动检测<br>
+***Dopamine最新版***(v1.6 alpha及以上)会自动检测您的Windows系统是否符合运行需求，如果Dopamine检测到你的Windows不符合需求，Dopamine将不会运行。在Dopamine版本v1.1 alpha中已经添加了对系统文件的自动检测，Dopamine版本v1.6 alpha已经添加了对系统语言的自动检测。<br>
 
 ***在Dopamine v1.4 alpha之后，您的Windows系统语言应该为简体中文***<br>
 
