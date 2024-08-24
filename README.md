@@ -22,7 +22,7 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本(旧版本�
 ***C:\Windows\System32\PING.EXE***<br>
 ***C:\Windows\System32\taskkill.exe***<br>
 ***C:\Windows\System32\cmd.exe***<br>
-***在Dopamine v1.5 alpha之前，Dopamine还需要C:\Windows\System32\wscript.exe***<br>
+***在Dopamine v1.5 alpha之前，Dopamine还需要C:\Windows\System32\wscript.exe***<br><br>
 ***以上文件缺一不可***<br><br>
 
 4.我应该在何处提交bug?
