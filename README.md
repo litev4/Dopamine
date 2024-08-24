@@ -22,7 +22,7 @@ Dopamine是一款类似于Windows的'服务'的应用,由batch脚本构成，常
 
 ***以上文件缺一不可***<br>
 ***在Dopamine v1.4 alpha版本后，非中文版的Windows将无法使用Dopamine。***<br>
-***在Dopamine v1.3 alpha及以前，Dopamine还需要C:\Windows\System32\wscript.exe***
+***在Dopamine v1.5 alpha之前，Dopamine还需要C:\Windows\System32\wscript.exe***
 
 4.我应该在何处提交bug?
 -
